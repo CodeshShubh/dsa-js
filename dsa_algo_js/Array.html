@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+// travarsal ->
+
+const array = [1,2,3,5,7,8]
+
+ const travarsal = ()=>{
+    // by traditianal loop ( itrate items)
+for(i=0; i<array.length; i++){
+    console.warn(`Traditianl: Index:${i} - items:${arr[i]}`)
+}
+
+// by forEach loop
+array.forEach((items, index)=>{
+    console.log(`forEach: Index:${index} - items:${items}`)
+})
+
+//by for of loop
+
+for(const items of array){
+     console.warn(`for of : ${items}`)
+}
+
+for(const values in array){
+     console.log(`for in : ${values}`)
+}
+ }
+//  travarsal()
+
+
+
+
+
+
+
+// insertion
+
+let arr = [1,2,5,6,7]
+
+// direct method
+// here we add 3 , 4 from the in the array
+arr.splice(2,0 ,3 ,4)
+console.log(arr)
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

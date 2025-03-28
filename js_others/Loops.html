@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+
+  <script>
+const arr = [1,2,3,4,5,6]
+
+ for (let i=0; i<arr.length; i++){
+     console.log( "Traditional",arr[i])
+ }
+
+    // for of loop
+    for (const num of arr){
+        console.log("for of", num)
+    }
+
+    // for in loop not recommend in arrays
+     const  obj = {
+        name:"shubhanshu",
+        age:"32" ,  
+    }
+    for(const key in obj){
+        console.log(`for in ${key}:${obj[key]}`)
+    }
+
+    arr.forEach((items , index)=> console.log(items))
+
+
+
+  </script>
+</html>
