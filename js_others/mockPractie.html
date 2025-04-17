@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mockPractice</title>
+</head>
+<body>
+
+    <input type="text" placeholder="min_price" id="min"/>
+    <input type="text" placeholder="max_price" id="max"/>
+    <input type="text" placeholder="search_products" id="search"/>
+    <button id="btn">search by price</button>
+
+    <ul id="products">
+        
+    </ul>
+    
+
+    <script>
+     let products = [];
+const productFetch = async()=>{
+       try{
+        const response = await fetch('./products.json');
+       const data = await response.json();
+        products=data;
+        renderProducts(products)
+       }catch(err){
+           console.log(err)
+       }
+}
+
+productFetch()
+
+
+
+
+const filterProducts = ()=>{
+    document.getElementById('btn').addEventListener('click', ()=>{
+      const min = document.getElementById('min').value;
+      const max = document.getElementById('max').value;
+
+      const filterProducts = products.filter((items , index)=> items.price>=min && items.price<=max)
+       
+       console.log(filterProducts)
+       renderProducts(filterProducts)
+  })
+}
+filterProducts()
+
+const searchFilter = ()=>{
+   const input =   document.getElementById('search')
+        input.addEventListener('input',()=>{
+        const searchValue = input.value
+
+        const searchFilter = products.filter((items)=> items.name.toLowerCase().includes(searchValue.toLowerCase()))
+
+        renderProducts(searchFilter)
+     })
+}
+
+searchFilter()
+
+
+
+const renderProducts = (productsArr)=>{
+      const ul =   document.getElementById('products')
+             ul.innerHTML='';
+     productsArr.forEach((items)=>{
+        const li = document.createElement("li")
+         li.textContent = `${items.name} - ${items.price}`
+        ul.appendChild(li)
+     })
+
+       
+}
+
+
+
+
+
+    </script>
+</body>
+</html>
