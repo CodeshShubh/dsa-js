@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion</title>
+</head>
+<body>
+    <script>
+
+// itrate array using recursion
+
+        // let arr = [1,2,3,4]
+        // function recursion(x , index=0){
+           
+        //     if(index >=arr.length) return
+        //         console.log(x[index])
+        //     recursion(x, index+1)
+            
+        // }
+        // recursion(arr)
+
+// -----------------------------
+    
+        // factorial  ->
+        // factoral of 5 -> 1x2x3x4x5
+
+    //  const fact=(x)=>{
+    //     if(x==0) return 1
+
+    //    return x * fact(x-1)
+    
+          
+    // }
+    // console.log( fact(5))
+
+
+
+    // -----------------------------------
+  // indirect recursion
+    // let money =100;
+    // let totalApple=0;
+
+    // function buyApple(x){
+    //     if(x>0){
+    //         totalApple++;
+    //         console.log('i have', x, "rs" , totalApple)
+            
+    //         bymore(x-10)
+            
+    //     }else{
+    //         console.log('i dont have more money', "but i have apple", totalApple)
+    //     }
+    // }
+
+    // function bymore(x){
+    //    totalApple ++
+    //    buyApple(x-10)
+    // }
+    // buyApple(money)
+
+
+    //---------------------------------------
+    // reverse array by recursion
+
+    let arr = [5,1,9,2,6,3,7,4,8]
+    let temp;
+    function sortByRecursion(arr , start ,end){
+        console.log(arr)
+           if(start<=end){
+                 temp = arr[start]
+                arr[start] = arr[end]
+                arr[end]=temp
+                sortByRecursion(arr , start+1 , end-1)
+           }
+    }
+
+    sortByRecursion(arr , 0 , arr.length-1)
+
+
+
+  
+
+    </script>
+</body>
+</html>
