@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Sort</title>
+</head>
+<body>
+    <script>
+        // selection sort
+
+         let arr = [3,2,7,9,32,5,1,0,98,44,55,66,11,99]
+
+          for(let i=0; i<arr.length; i++){
+                let minElemindex=i
+
+                for(let j=i+1; j<arr.length; j++){
+                     if(arr[j]<arr[minElemindex]){
+                          minElemindex=j
+                     }
+                     console.log(arr)
+                }
+                let temp = arr[minElemindex]
+                   arr[minElemindex]=arr[i]
+                   arr[i]=temp
+          }
+          console.log(arr)
+
+    </script>
+</body>
+</html>

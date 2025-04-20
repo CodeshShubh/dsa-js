@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object and Hash Table</title>
+</head>
+<body>
+    <script>
+            let obj = {
+                name:'shubhanshu',
+                age:28,
+                email:'lauda@gmail.com',
+                func: function (){
+                  return this.name
+                }
+            }
+
+            // if we want to add new thing in it
+             obj.contactNumber=7060821855
+             obj['lauda']='gandwa'
+
+             // if we went to delete any thing in object
+             delete obj.email
+
+             // if we want to update anyting
+              obj.age=30
+             console.log(obj)
+             console.log(obj.func())
+
+                 // itrate in keys
+             for( let x in obj){
+                console.log(obj[x])
+             }
+
+             // itrate in values
+
+             for( let x in obj){
+                console.log(x)
+             }
+
+
+             // if we want object keys/value and both in an array
+
+             console.log(Object.values(obj))
+             console.log(Object.keys(obj))
+             console.log(Object.entries(obj)) // here we got array in key and value pairs an nested array key as first elemet and 
+             // value as second element in nested array
+ 
+    </script>
+</body>
+</html>

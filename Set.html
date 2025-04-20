@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set</title>
+</head>
+<body>
+    
+
+    <script>
+
+         let data = new Set(['anil' , 'shubh' , 'anil']) // it remove dublicate value
+
+         // add value in set
+
+          data.add(5)
+          console.log(data)
+
+
+          // check that elemnt is persent it or not
+
+           console.warn(data.has())
+
+
+
+           // we can add  object in it also
+
+            data.add({lauda:'lassun'})
+          console.log(data)
+
+          // to find size of set
+           data.size
+
+        //    // we can also clear set
+        //    data.clear()
+
+
+         // to delete a vaue form the set 
+          data.delete('anil')
+          console.log(data)
+
+
+          // if we want to delete and object in set 
+          // first if we want to delete it dierectly so whe have firest add it sparetly in set like
+          // firest we can define object sapreatly like 
+          // let obj={} -------->
+          // then pass it into set like that 
+          // data.add(obj) ---------->
+          // if we want to delete it so we can easly delete it like that 
+          // data.delete(obj) --------->
+
+
+          // second method to delete it 
+
+          for(x of data){
+            if(typeof x==='object' && x.lauda==='lassun'){
+                data.delete(x)
+                break
+            }
+          }
+          console.log(data)
+
+
+          // loops we can use in it like for of loop and forEach loop
+
+    </script>
+
+</body>
+</html>

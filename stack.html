@@ -13,6 +13,94 @@
 // pending not importent
 
 
+ // bubble sort
+
+//  let arr = [90,80,10, 1,8,3,6,0,5,4,2,7,9] 
+
+
+//   const bubbleSort = ()=>{
+//       for(let i=0; i<arr.length; i++){
+//           for(let j=0; j<arr.length; j++){
+//              if(arr[j]>arr[j+1]){
+//                 let temp = arr[j]
+//                 arr[j] = arr[j+1]
+//                 arr[j+1]=temp
+//              }
+//           }
+//       }
+//   }
+
+//   bubbleSort(arr)
+//   console.log(arr)
+
+// selection sort
+// let arr = [90,80,10, 1,8,3,6,0,5,4,2,7,9] 
+
+// const selectionSort = ()=>{
+//      for(let i=0; i<arr.length; i++){
+//          let minElemIndex = i;
+//          for(let j=i+1; j<arr.length; j++){
+//              if(arr[j]<arr[minElemIndex]){
+//                 minElemIndex=j
+//              }
+//          }
+//          let temp = arr[minElemIndex]
+//          arr[minElemIndex]=arr[i]
+//          arr[i]=temp
+//      }
+// }
+// selectionSort(arr)
+// console.log(arr)
+
+
+// insertionSort
+
+
+// const insertionSort = ()=>{
+//     for(let i=1; i<arr.length; i++){
+//         let current = arr[i];
+//         let j=i-1;
+//         while(j>=0 && arr[j]>current){
+//               arr[j+1]=arr[j]
+//               j--
+//         }
+//         arr[j+1]=current
+//     }
+// }
+// insertionSort(arr)
+// console.log(arr)
+
+
+
+// quick sort 
+
+let arr = [90,80,10, 1,8,3,6,0,5,4,2,7,9] 
+
+const quickSort = (arr)=>{
+    if(arr.length<=1) return arr
+
+    let pivot = arr[arr.length-1] //9
+    let left =[]
+    let right=[]
+
+
+      for(let i=0; i<arr.length-1; i++){
+        if(arr[i]<=pivot){
+            left.push(arr[i])
+        }else{
+            right.push(arr[i])
+        }
+      }
+      return [...quickSort(left), pivot , ...quickSort(right)]
+}
+
+let sortArr = quickSort(arr)
+console.log(sortArr)
+
+
+
+
+
 
 
     </script>

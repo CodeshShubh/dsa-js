@@ -8,20 +8,25 @@
   <body>
     <script>
       // bubble sort
-      let arr = [8,1, 5, 7, 4, 6, 2, 3];
+      let arr = [];
 
-      for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr.length; j++) {
-          if (arr[j + 1] < arr[j]) {
-            let temp = arr[j + 1];
-            arr[j + 1] = arr[j];
-            arr[j] = temp;
+       for(let i=0; i<1200; i++){
+         arr.push(Math.floor(Math.random()*100000))
+       }
+
+console.time("Bubble Sort");
+
+          for(let i=0; i<arr.length; i++){
+             for(let j=0; j<arr.length; j++){
+                    if(arr[j]>arr[j+1]){
+                       let temp = arr[j+1]
+                       arr[j+1] = arr[j]
+                       arr[j]=temp
+                    }
+             }
           }
-
-        }
-
-      }
-      console.log(arr)
+          console.log(arr)
+          console.timeEnd("Bubble Sort")
 
       // time complexity -> n2 because of nested loop
       // space complexity -> 0(1) only static variable not other created during this code

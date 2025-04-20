@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data</title>
+</head>
+<body>
+    <script>
+         let data = new Map([
+            ["name",'shubhanshu'],
+            ["age", 57],
+            ["id", true]
+         ])
+          
+        
+         console.log(data)
+
+
+
+         // to add new value in data
+         data.set('color', 'white')
+
+
+         // to console the size
+         console.log(data.size)
+
+
+         // to find that it has key or not
+        console.log( data.has("id"))
+
+
+        // to get the value of periculer key
+        console.log(data.get('name'))
+
+        //  // to clear all data form data
+        //  data.clear()
+
+
+        // applay loop on data
+
+        for(x of data){
+              console.log(x) // here we got arrays with key and value  ['name', 'shubhanshu'] ['age', 57]['id', true]['color', 'white']
+        }
+        for(x of data){
+            console.log(x[0]) // this will iterate keys using 0
+        }
+
+        for( x of data){
+            console.log(x[1]) // this will itrate values using 1
+        }
+
+         // also we can use for each loop
+
+          data.forEach((value , key)=>{ // note -> first value aati hai then key
+             console.log(key, value)
+          })
+
+
+          // how to remove elemet in Map ?
+           data.delete('id')
+           console.log(data)
+
+    </script>
+</body>
+</html>
