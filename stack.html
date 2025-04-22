@@ -72,36 +72,49 @@
 
 
 
-// quick sort 
+// binary search 
 
-let arr = [90,80,10, 1,8,3,6,0,5,4,2,7,9] 
+// let arr1 = [90,80,10,1,8,3,6,0,5,4,2,7,9] 
+// let arr = arr1.sort()
+// console.log(arr)
 
-const quickSort = (arr)=>{
-    if(arr.length<=1) return arr
+// let find = 5
 
-    let pivot = arr[arr.length-1] //9
-    let left =[]
-    let right=[]
+// let start = 0;
+// let end = arr.length-1
 
-
-      for(let i=0; i<arr.length-1; i++){
-        if(arr[i]<=pivot){
-            left.push(arr[i])
-        }else{
-            right.push(arr[i])
-        }
-      }
-      return [...quickSort(left), pivot , ...quickSort(right)]
-}
-
-let sortArr = quickSort(arr)
-console.log(sortArr)
+//  while(start<=end){
+//      let mid = Math.floor((start+end)/2)
+//       if(arr[mid]>find){
+//         end=mid-1
+//       }else if(arr[mid]<find){
+//         start=mid+1
+//       }else {
+//         console.log(mid)
+//         break;
+//       }
+//  }
 
 
+ // quick sort
+ let arr1 = [90,80,10,1,8,3,6,0,5,4,2,7,9] 
 
+   function quickSort(arr1){
+     if(arr1.length<=1) return arr1
 
-
-
+    let pivot = arr1[arr1.length-1]
+        let left = []
+        let righ = []
+       for(let i=0; i<arr1.length-1; i++){
+          if(arr1[i]<pivot){
+              left.push(arr1[i])
+          }else{
+            righ.push(arr1[i])
+          }
+       }
+       return [...quickSort(left), pivot , ...quickSort(righ)]
+  }
+console.log(quickSort(arr1))
 
     </script>
 </body>
